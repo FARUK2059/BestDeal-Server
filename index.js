@@ -42,6 +42,13 @@ async function run() {
         const productCollections = client.db("BestDeal").collection("product");
 
 
+        // get All Products functionality
+        app.get('/products',  async (req, res) => {
+            const result = await productCollections.find().toArray();
+            res.send(result);
+        });
+
+
 
 
 
