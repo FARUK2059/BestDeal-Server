@@ -13,8 +13,8 @@ const port = process.env.PORT || 5000;
 app.use(cors({
     origin: [
         'http://localhost:5173',
-        // 'https://medicare-2059.web.app',
-        // 'https://medicare-2059.firebaseapp.com'
+        'https://bestdeal-5e08b.web.app',
+        'https://bestdeal-5e08b.firebaseapp.com'
     ],
     credentials: true
 }));
@@ -43,10 +43,29 @@ async function run() {
 
 
         // get All Products functionality
-        app.get('/products',  async (req, res) => {
+        app.get('/products', async (req, res) => {
             const result = await productCollections.find().toArray();
             res.send(result);
         });
+
+        // Kuno Database a koto gula Data ase seta Calculet korar function
+        app.get('/productsCount', async (req, res) => {
+            const count = await productCollections.estimatedDocumentCount();
+            res.send({ count })
+        })
+
+        // pagination client side data patanur function
+        app.get('/product', async (req, res) => {
+            const page = parseInt(req.query.page);
+            const size = parseInt(req.query.size);
+
+            console.log('pagination query', page, size);
+            const result = await productCollections.find()
+                .skip(page * size)
+                .limit(size)
+                .toArray();
+            res.send(result);
+        })
 
 
 
