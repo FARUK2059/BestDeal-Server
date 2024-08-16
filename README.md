@@ -2,8 +2,6 @@
 
 This is the backend server for the Product Management Application built with Node.js, Express.js, and MongoDB. It provides APIs for managing and retrieving product data, user authentication, and other backend functionalities.
 
-## Project Setup
-
 ### Prerequisites
 
 - Node.js (v16 or higher)
