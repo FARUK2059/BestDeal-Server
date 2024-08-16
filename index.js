@@ -56,8 +56,8 @@ async function run() {
 
         // pagination client side data patanur function
         app.get('/product', async (req, res) => {
-            const page = parseInt(req.query.page);
-            const size = parseInt(req.query.size);
+            const page = parseInt(req.query.page) || 0;
+            const size = parseInt(req.query.size) || 10;
 
             console.log('pagination query', page, size);
             const result = await productCollections.find()
@@ -66,6 +66,7 @@ async function run() {
                 .toArray();
             res.send(result);
         })
+
 
 
 
