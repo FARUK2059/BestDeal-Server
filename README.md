@@ -1,25 +1,42 @@
-# Backend for Product Management Application
+# Product Management Application Backend
 
-This is the backend server for the Product Management Application built with Node.js, Express.js, and MongoDB. It provides APIs for managing and retrieving product data, user authentication, and other backend functionalities.
+This repository contains the backend server for the Product Management Application, built using Node.js, Express.js, and MongoDB. It provides a RESTful API for managing products, user authentication, and other related functionalities.
 
-### Prerequisites
+## Table of Contents
 
-- Node.js (v16 or higher)
-- Express use
-- MongoDB (or a MongoDB Atlas account)
-- Firebase account for authentication
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [API Documentation](#api-documentation)
+- [Error Handling](#error-handling)
+- [Security](#security)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-### Installation
+## Features
+
+- **Product Management**: Create, read, update, and delete products.
+- **User Authentication**: Secure user login and registration using Firebase.
+- **Role-Based Access Control**: Differentiate between user roles such as Admin and User.
+- **Pagination & Filtering**: Efficiently retrieve large sets of data with pagination and filtering options.
+- **Error Handling**: Standardized error responses for easy debugging.
+- **Security**: Implements security best practices, including data validation and environment variable usage.
+
+## Prerequisites
+
+Ensure you have the following installed on your system:
+
+- **Node.js** (v16 or higher)
+- **MongoDB** (or a MongoDB Atlas account)
+- **Firebase** (for user authentication)
+
+## Installation
 
 1. **Clone the Repository**
 
    ```bash
-   git clone <https://github.com/FARUK2059/BestDeal.gi>
-
-### Instructions:
-
-1. **Replace** `<https://github.com/FARUK2059/BestDeal.gi>`, `<https://github.com/FARUK2059/BestDeal-Server.git>`, with the actual repository URLs and directory names.
-2. **Replace** `<https://best-deal-server.vercel.app>`,  `<https://bestdeal-5e08b.web.app>`, etc., with your actual API and Firebase credentials.
-3. **Replace** `web.omarfaruk.dev@gmail.com` with your contact email.
-
-This `README.md` provides a comprehensive guide for setting up and running both the frontend and backend of your application.
+   git clone https://github.com/FARUK2059/BestDeal-Server.git
+   cd BestDeal-Server
