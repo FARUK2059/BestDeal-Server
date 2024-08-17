@@ -5,6 +5,7 @@ This is the backend server for the Product Management Application built with Nod
 ### Prerequisites
 
 - Node.js (v16 or higher)
+- Express use
 - MongoDB (or a MongoDB Atlas account)
 - Firebase account for authentication
 
